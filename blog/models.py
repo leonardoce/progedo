@@ -31,6 +31,7 @@ class Post(models.Model):
     category = models.ForeignKey('Category')
     content = models.TextField(null=False)
     date = models.DateField()
+    author = models.ForeignKey('auth.User')
 
     def __str__(self):
         """

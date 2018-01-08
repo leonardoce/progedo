@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from blog.models import Post
 
 
 def ciao(request):
@@ -7,4 +8,6 @@ def ciao(request):
 
 
 def index(request):
-    return render(request, "blog/index.html", {})
+    object_list = Post.objects.all()
+    return render(request, "blog/index.html", {
+        'object_list': object_list})

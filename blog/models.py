@@ -30,6 +30,7 @@ class Post(models.Model):
     slug = models.SlugField(null=False, unique=True, max_length=255)
     category = models.ForeignKey('Category')
     content = models.TextField(null=False)
+    date = models.DateField()
 
     def __str__(self):
         """

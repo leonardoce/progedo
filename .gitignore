@@ -192,6 +192,6 @@ Session.vim
 tags
 
 # PythonAnywhere
-static/
+/static/
 
 # End of https://www.gitignore.io/api/vim,emacs,django,python

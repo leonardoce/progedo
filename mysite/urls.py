@@ -21,4 +21,5 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^ciao/', views.ciao),
     url(r'^$', views.index),
+    url(r'^categories/(?P<slug>[-\w]+)/$', views.category, name="category"),
 ]

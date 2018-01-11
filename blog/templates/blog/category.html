@@ -1,5 +1,9 @@
 {% extends "blog/base.html" %}
 
+{% block navbar-brand %}
+({{ category.title }})
+{% endblock %}
+
 {% block content %}
 <div class="row">
 

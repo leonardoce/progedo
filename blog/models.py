@@ -39,3 +39,19 @@ class Post(models.Model):
         Django Admin interface
         """
         return "Post: %s" % self.title
+
+
+class Comment(models.Model):
+    """
+    This model represent a comment on a post
+    """
+    content = models.TextField()
+    author = models.ForeignKey('auth.User')
+    date = models.DateField()
+    post = models.ForeignKey('Post')
+
+    def __str__(self):
+        """
+        Returns the string representation of this comment
+        """
+        return "Comment on post %s with ID %s" % (self.post.title, self.id)

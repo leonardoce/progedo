@@ -8,15 +8,14 @@
     <b>{{ object.category.title }}</b>
     <p>{{ object.content }}</p>
     <p>{{ object.date }}</p>
-{% endfor %}
 
-{% comment %}
-    <p>
-        Io sono <b>Leonardo Cecchi</b>
-    </p>
-    <p>
-        La mia <a href="/ciao/">prima vista con Django</a>
-    </p>
-{% endcomment %}
+    <h3>Comments</h3>
+
+    {% for comment in object.comment_set.all %}
+        <h4>{{ comment.author }} on {{ comment.date }} wrote:</h4>
+
+        {{ comment.content }}
+    {% endfor %}
+{% endfor %}
 
 {% endblock %}

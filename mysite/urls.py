@@ -22,4 +22,5 @@ urlpatterns = [
     url(r'^ciao/', views.ciao),
     url(r'^$', views.index),
     url(r'^categories/(?P<slug>[-\w]+)/$', views.category, name="category"),
+    url(r'^posts/(?P<slug>[-\w]+)/$', views.PostView.as_view(), name="post"),
 ]

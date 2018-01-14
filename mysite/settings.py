@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'blog',
+    'snowpenguin.django.recaptcha2',
 ]
 
 MIDDLEWARE = [
@@ -126,3 +127,6 @@ MEDIA_ROOT = u'/home/leonardoce/mysite/media'
 MEDIA_URL = '/media/'
 STATIC_ROOT = u'/home/leonardoce/mysite/static'
 STATIC_URL = '/static/'
+
+RECAPTCHA_PRIVATE_KEY = '6LfwoEAUAAAAAPtr7mO47JZPcOtlX7PJ0tVlt_ni'
+RECAPTCHA_PUBLIC_KEY = '6LfwoEAUAAAAAATsVvxl0gJqoiuRa7OtFcFPm5se'

@@ -36,6 +36,15 @@ class Post(models.Model):
     content = models.TextField(null=False)
     date = models.DateField()
     author = models.ForeignKey('auth.User')
+    is_published = models.BooleanField()
+
+    def get_absolute_url(self):
+        from django.urls import reverse
+        return reverse('post', kwargs={'slug': str(self.slug)})
+
+    @property
+    def excerpt(self):
+        return self.content[:100] + "..."
 
     def __str__(self):
         """

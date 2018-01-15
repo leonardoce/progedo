@@ -31,7 +31,7 @@ def category(request, slug):
         'category_list': category_list})
 
 
-class CommentForm(forms.Form):
+class CommentForm(forms.Form): # from django import forms
     author = forms.EmailField()
     content = forms.CharField(widget=forms.Textarea)
     captcha = ReCaptchaField(widget=ReCaptchaWidget())
